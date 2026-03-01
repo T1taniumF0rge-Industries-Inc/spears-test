@@ -1,13 +1,13 @@
 modLoader="javafml"
 loaderVersion="[4,)"
-license="Not specified"
+license="MIT"
 
 [[mods]]
 modId="spears"
 version="2.0.0"
 displayName="Spears"
-displayURL="https://mcreator.net"
-credits="Created using mod maker MCreator - https://mcreator.net/about"
+displayURL="https://modrinth.com/mod/spears-mod"
+credits="Created with MCreator barebone and maintained by Titan1um"
 authors="Polr, Titan1um"
 description='''
 Adds spears in versions before their addition to the game!

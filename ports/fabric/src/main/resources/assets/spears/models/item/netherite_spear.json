@@ -1,0 +1,6 @@
+{
+  "parent": "item/handheld",
+  "textures": {
+    "layer0": "spears:item/netherite_spear_je1_be1"
+  }
+}

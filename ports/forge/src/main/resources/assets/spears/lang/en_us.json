@@ -1,0 +1,10 @@
+{
+  "item.spears.wooden_spear": "Wooden Spear",
+  "item.spears.stone_spear": "Stone Spear",
+  "item.spears.copper_spear": "Copper Spear",
+  "item.spears.gold_spear": "Gold Spear",
+  "item.spears.diamond_spear": "Diamond Spear",
+  "item.spears.netherite_spear": "Netherite Spear",
+  "enchantment.spears.lunge": "Lunge",
+  "item.spears.impaling_bonus": "Impaling Bonus: +%s"
+}

@@ -1,0 +1,28 @@
+{
+  "description": {
+    "translate": "enchantment.spears.lunge"
+  },
+  "supported_items": [
+    "spears:wooden_spear",
+    "spears:stone_spear",
+    "spears:copper_spear",
+    "spears:gold_spear",
+    "spears:diamond_spear",
+    "spears:netherite_spear"
+  ],
+  "weight": 5,
+  "max_level": 3,
+  "min_cost": {
+    "base": 1,
+    "per_level_above_first": 10
+  },
+  "max_cost": {
+    "base": 6,
+    "per_level_above_first": 10
+  },
+  "anvil_cost": 10,
+  "slots": [
+    "any"
+  ],
+  "exclusive_set": []
+}

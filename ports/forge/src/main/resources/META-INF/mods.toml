@@ -1,0 +1,26 @@
+modLoader="javafml"
+loaderVersion="[52,)"
+license="All-Rights-Reserved"
+
+[[mods]]
+modId="spears"
+version="1.0.1-1.21.8"
+displayName="Spears"
+authors="Polr, Titan1um"
+description='''
+Adds spears in versions before their addition to the game!
+'''
+
+[[dependencies.spears]]
+modId="forge"
+type="required"
+versionRange="[52,)"
+ordering="NONE"
+side="BOTH"
+
+[[dependencies.spears]]
+modId="minecraft"
+type="required"
+versionRange="[1.21.8]"
+ordering="NONE"
+side="BOTH"

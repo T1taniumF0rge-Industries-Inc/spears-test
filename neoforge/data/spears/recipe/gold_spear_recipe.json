@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "  a",
+    " b ",
+    "b  "
+  ],
+  "key": {
+    "a": "minecraft:gold_ingot",
+    "b": "minecraft:stick"
+  },
+  "result": {
+    "id": "spears:gold_spear",
+    "count": 1
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "  a",
+    " b ",
+    "b  "
+  ],
+  "key": {
+    "a": "#c:stones",
+    "b": "minecraft:stick"
+  },
+  "result": {
+    "id": "spears:stone_spear",
+    "count": 1
+  }
+}

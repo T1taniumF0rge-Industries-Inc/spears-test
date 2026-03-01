@@ -4,6 +4,8 @@ set -euo pipefail
 ROOT_DIR="$(cd "$(dirname "$0")" && pwd)"
 DIST_DIR="$ROOT_DIR/dist"
 TMP_DIR="$ROOT_DIR/.tmp_build"
+VERSION="2.0.0"
+MC_VERSION="1.21.8"
 
 python - <<'PY'
 import shutil, os
@@ -14,16 +16,17 @@ os.makedirs('dist', exist_ok=True)
 os.makedirs('.tmp_build', exist_ok=True)
 PY
 
-# NeoForge artifact (primary)
-cp "$ROOT_DIR/jars/neoforge/spears-1.0.0-neoforge-1.21.8.jar" "$DIST_DIR/spears-1.0.1-neoforge-1.21.8.jar"
+# NeoForge artifact (primary): package directly from neoforge tree so metadata/class updates are included
+(
+  cd "$ROOT_DIR/neoforge"
+  jar --create --file "$DIST_DIR/spears-${VERSION}-neoforge-${MC_VERSION}.jar" .
+)
 
-# Port resource/data bundles for Fabric/Forge/Quilt.
-# To keep PRs text-only, loader ports do not store binary textures in-repo.
-# We inject textures from the canonical NeoForge assets during packaging.
+# Fabric / Forge / Quilt jars built from their resource roots + injected canonical textures.
 for LOADER in fabric forge quilt; do
-  SRC="$ROOT_DIR/ports/$LOADER/src/main/resources"
+  SRC="$ROOT_DIR/$LOADER/src/main/resources"
   STAGE="$TMP_DIR/$LOADER"
-  OUT="$DIST_DIR/spears-1.0.1-$LOADER-1.21.8.zip"
+  OUT="$DIST_DIR/spears-${VERSION}-$LOADER-${MC_VERSION}.jar"
 
   mkdir -p "$STAGE"
   cp -r "$SRC"/. "$STAGE"/
@@ -32,7 +35,7 @@ for LOADER in fabric forge quilt; do
 
   (
     cd "$STAGE"
-    zip -qr "$OUT" .
+    jar --create --file "$OUT" .
   )
 done
 

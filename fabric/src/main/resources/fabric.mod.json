@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 1,
+  "id": "spears",
+  "version": "2.0.0-1.21.8",
+  "name": "Spears",
+  "description": "Adds spears in versions before their addition to the game!",
+  "authors": [
+    "Polr",
+    "Titan1um"
+  ],
+  "license": "All-Rights-Reserved",
+  "environment": "*",
+  "depends": {
+    "minecraft": "1.21.8",
+    "fabricloader": ">=0.16.0",
+    "fabric-api": "*"
+  },
+  "entrypoints": {
+    "main": [
+      "dev.spears.fabric.SpearsFabricMod"
+    ]
+  }
+}

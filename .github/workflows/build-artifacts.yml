@@ -19,15 +19,12 @@ jobs:
         with:
           python-version: '3.11'
 
-      - name: Install zip utility
-        run: sudo apt-get update && sudo apt-get install -y zip
-
       - name: Build all loader artifacts
         run: bash ./build_all_loaders.sh
 
       - name: Upload dist artifacts
         uses: actions/upload-artifact@v4
         with:
-          name: spears-1.21.8-artifacts
+          name: spears-2.0.0-1.21.8-artifacts
           path: dist/*
           if-no-files-found: error

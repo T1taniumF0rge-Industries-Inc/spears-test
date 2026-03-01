@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "quilt_loader": {
+    "group": "net.mcreator",
+    "id": "spears",
+    "version": "2.0.0-1.21.8",
+    "metadata": {
+      "name": "Spears",
+      "description": "Adds spears in versions before their addition to the game!",
+      "contributors": {
+        "Polr": "Owner",
+        "Titan1um": "Owner"
+      },
+      "license": "All-Rights-Reserved"
+    },
+    "intermediate_mappings": "net.fabricmc:intermediary",
+    "depends": [
+      {
+        "id": "minecraft",
+        "versions": "1.21.8"
+      },
+      {
+        "id": "quilt_loader",
+        "versions": ">=0.27.0"
+      }
+    ],
+    "entrypoints": {
+      "init": "dev.spears.quilt.SpearsQuiltMod"
+    }
+  }
+}
